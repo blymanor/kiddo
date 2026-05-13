@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const GIF_MAIN =
   "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c3M4cmYzYTB4aXZnZnF4YzI3cXQ0YWkxaG9za2VuenVycmtlZGpnYiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/xUPGcyGUoajDl0nP9u/giphy.gif";
 const GIF_YES =
-  "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NXFpYzVzb3FjeGlsYTZmcXVwamhyYjAyc2phYThuZDJlc3NkMXB3bSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/bfJuQRgrbYq3XHhKVg/giphy.gif";
+  "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Y2J5d3F3dmlzY3Z4dzY5MDU1eHo1dWF6dDV6amdhZG83NHl3eWgzdyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/3QcftXNHnzDHGNA8W6/giphy.gif";
 const GIF_NO =
   "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N3BkYzE1eTluNzRob2pyYWw2dmRtOWFmajVtNmxkZmM0Nng2MTlzdyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/3o6ozw4tndtKMvjYbe/giphy.gif";
 
@@ -97,7 +97,7 @@ export default function Page() {
       >
         <div className="overflow-hidden rounded-[22px] bg-[#fff1e8] p-2 shadow-inner shadow-rose-200/50">
           <img
-            className="aspect-[4/3] w-full rounded-[17px] object-cover"
+            className="aspect-[4/3] w-full rounded-[17px] object-center"
             src={currentGif}
             alt={yesPressed ? "cute happy gif" : "cute waiting gif"}
           />
@@ -127,7 +127,7 @@ export default function Page() {
                 <div className="relative z-30 flex h-[120px] w-[120px] items-center justify-center">
                   <button
                     onClick={() => setYesPressed(true)}
-                    className="h-12 w-24 rounded-full bg-[#e84470] text-base font-black text-white shadow-[0_16px_32px_rgba(216,61,104,0.34)] transition-transform duration-300 hover:bg-[#d83d68] focus:outline-none focus:ring-4 focus:ring-[#f8b5c5]"
+                    className="h-16 w-32 rounded-full bg-[#e84470] text-lg font-black text-white shadow-[0_16px_32px_rgba(216,61,104,0.34)] transition-transform duration-300 hover:bg-[#d83d68] focus:outline-none focus:ring-4 focus:ring-[#f8b5c5]"
                     style={{
                       transform: `scale(${yesScale})`,
                       transformOrigin: "center",
@@ -140,7 +140,7 @@ export default function Page() {
                 <div className="relative z-10 flex h-[120px] w-[120px] items-center justify-center">
                   <button
                     onClick={handleNo}
-                    className="h-12 w-24 rounded-full border border-[#d7bbc9] bg-white text-base font-black text-[#745366] shadow-[0_10px_24px_rgba(89,58,76,0.14)] transition duration-300 hover:-translate-y-0.5 hover:border-[#be8fa5] hover:bg-[#fff0f5] focus:outline-none focus:ring-4 focus:ring-[#edd3df] active:translate-y-0"
+                    className="h-16 w-32 rounded-full border border-[#d7bbc9] bg-white text-lg font-black text-[#745366] shadow-[0_10px_24px_rgba(89,58,76,0.14)] transition duration-300 hover:-translate-y-0.5 hover:border-[#be8fa5] hover:bg-[#fff0f5] focus:outline-none focus:ring-4 focus:ring-[#edd3df] active:translate-y-0"
                     style={{
                       transform: `translate(${noPos.x}px, ${noPos.y}px) scale(${noScale})`,
                       transformOrigin: "center",
