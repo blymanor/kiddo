@@ -147,7 +147,7 @@ export default function Page() {
               </div>
 
               <h1 className="text-[1.6rem] font-black leading-[1.05] text-[#d83d68] sm:text-2xl">
-                วันนี้น้องแนนคิดถึงพี่เพลงไม๊
+                น้องแนนคิดถึงพี่เพลงไม๊
               </h1>
             </div>
 
