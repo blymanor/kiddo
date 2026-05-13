@@ -108,9 +108,13 @@ export default function Page() {
             <div className="text-2xl font-black leading-[1.08] tracking-normal text-[#d83d68]">
               เค้าคิดถึงมากกว่า 🥺
             </div>
-            <p className="pop-in mx-auto mt-3 w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100">
-              ขอให้น้องแนนไม่เปียกฝนด้วยนะ :3
-            </p>
+            <div className="px-3 pb-2 pt-7 text-center">
+              <div className="mb-4 min-h-9">
+                <p className="pop-in mx-auto w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100">
+                  ขอให้ตอนเลิกงาน น้องแนนไม่เปียกฝน :3
+                </p>
+              </div>
+            </div>
           </div>
         ) : (
           <div>
