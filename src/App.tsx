@@ -122,7 +122,7 @@ export default function Page() {
 
         {yesPressed ? (
           <div className="px-2 pb-3 pt-5 text-center sm:px-3 sm:pb-4 sm:pt-7">
-            <div className="text-[1.6rem] font-black leading-[1.08] text-[#d83d68] sm:text-2xl">
+            <div className="text-2xl font-black leading-[1.08] text-[#d83d68]">
               เค้าคิดถึงมากกว่า 🥺
             </div>
 
@@ -146,7 +146,7 @@ export default function Page() {
                 )}
               </div>
 
-              <h1 className="text-[1.6rem] font-black leading-[1.05] text-[#d83d68] sm:text-2xl">
+              <h1 className="text-2xl font-black leading-[1.05] text-[#d83d68]">
                 น้องแนนคิดถึงพี่เพลงไม๊
               </h1>
             </div>
