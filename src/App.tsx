@@ -41,6 +41,7 @@ export default function Page() {
   const [noPos, setNoPos] = useState({ x: 0, y: 0 });
   const [shake, setShake] = useState(false);
   const [showNoGif, setShowNoGif] = useState(false);
+  const [showMain, setShowMain] = useState(false);
 
   const yesScale = Math.min(4.2, 1 + noCount * 0.12);
   const yesShift = Math.min(42, noCount * 6);
@@ -78,6 +79,11 @@ export default function Page() {
       return () => window.clearTimeout(timer);
     }
   }, [noCount]);
+
+  useEffect(() => {
+    const t = window.setTimeout(() => setShowMain(true), 1000);
+    return () => window.clearTimeout(t);
+  }, []);
 
   return (
     <main className="relative grid min-h-screen place-items-center overflow-hidden bg-[#fff7f1] px-4 py-8 text-[#382235] sm:px-6">
@@ -147,9 +153,29 @@ export default function Page() {
                 )}
               </div>
 
-              <h1 className="text-2xl font-black leading-[1.05] text-[#d83d68]">
-                น้องแนนคิดถึงพี่เพลงไม๊
-              </h1>
+              <div className="relative min-h-[2rem]">
+                <h1
+                  className="absolute inset-x-0 text-2xl font-black leading-[1.05] text-[#d83d68]"
+                  style={{
+                    opacity: showMain ? 0 : 1,
+                    transform: showMain ? "scale(0.75)" : "scale(1)",
+                    transition: "opacity 0.4s ease, transform 0.4s ease",
+                    pointerEvents: "none",
+                  }}
+                >
+                  อาโย๋
+                </h1>
+                <h1
+                  className="text-2xl font-black leading-[1.05] text-[#d83d68]"
+                  style={{
+                    opacity: showMain ? 1 : 0,
+                    transform: showMain ? "scale(1)" : "scale(1.15)",
+                    transition: "opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s",
+                  }}
+                >
+                  น้องแนนคิดถึงพี่เพลงไม๊
+                </h1>
+              </div>
             </div>
 
             {/* buttons */}
@@ -246,6 +272,7 @@ export default function Page() {
             transform: scale(1);
           }
         }
+
       `}</style>
     </main>
   );
