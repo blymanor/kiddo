@@ -46,6 +46,14 @@
     }
 }
 
+@media (max-width: 640px) {
+    .floating-heart {
+        opacity: 0.7 !important;
+        transform: scale(1.18);
+        animation-duration: 6.2s !important;
+    }
+}
+
 /* :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
