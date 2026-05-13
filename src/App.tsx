@@ -122,14 +122,15 @@ export default function Page() {
 
         {yesPressed ? (
           <div className="px-2 pb-3 pt-5 text-center sm:px-3 sm:pb-4 sm:pt-7">
-            <div className="text-2xl font-black leading-[1.08] text-[#d83d68]">
+            <div className="text-xl font-black leading-[1.08] text-[#d83d68]">
               เค้าคิดถึงมากกว่า 🥺
             </div>
 
             <div className="px-2 pb-1 pt-5 text-center sm:px-3 sm:pb-2 sm:pt-7">
               <div className="mb-4 min-h-9">
                 <p className="pop-in mx-auto w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100">
-                  ขอให้ตอนเลิกงาน น้องแนนไม่เปียกฝน :3
+                  ขอให้ตอนเลิกงาน <br />
+                  น้องแนนไม่เปียกฝน :3
                 </p>
               </div>
             </div>
