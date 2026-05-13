@@ -74,7 +74,7 @@ export default function Page() {
         {FLOATING_HEARTS.map((heart, index) => (
           <span
             key={`${heart.mark}-${index}`}
-            className="absolute select-none font-black [animation:float_5s_ease-in-out_infinite]"
+            className="floating-heart absolute select-none font-black"
             style={{
               left: `${heart.left}%`,
               top: `${heart.top}%`,
@@ -104,15 +104,20 @@ export default function Page() {
         </div>
 
         {yesPressed ? (
-          <div className="text-2xl font-black leading-[1.08] tracking-normal text-[#d83d68] px-3 pb-4 pt-7 text-center">
-            เค้าคิดถึงมากกว่า 🥺
+          <div className="px-3 pb-4 pt-7 text-center">
+            <div className="text-2xl font-black leading-[1.08] tracking-normal text-[#d83d68]">
+              เค้าคิดถึงมากกว่า 🥺
+            </div>
+            <p className="pop-in mx-auto mt-3 w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100">
+              ขอให้น้องแนนไม่เปียกฝนด้วยนะ :3
+            </p>
           </div>
         ) : (
-          <>
+          <div>
             <div className="px-3 pb-2 pt-7 text-center">
               <div className="mb-4 min-h-9">
                 {noCount > 0 && (
-                  <p className="mx-auto w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100 [animation:pop_0.22s_ease]">
+                  <p className="pop-in mx-auto w-fit rounded-full bg-[#fff0f3] px-4 py-2 text-sm font-bold text-[#b74360] shadow-sm ring-1 ring-rose-100">
                     {noText}
                   </p>
                 )}
@@ -151,27 +156,9 @@ export default function Page() {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         )}
       </section>
-
-      <style>{`
-        @keyframes shake {
-          0%, 100% { transform: translateX(0); }
-          25% { transform: translateX(-6px); }
-          75% { transform: translateX(6px); }
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(-5deg) scale(1); }
-          50% { transform: translateY(-20px) rotate(6deg) scale(1.08); }
-        }
-
-        @keyframes pop {
-          0% { transform: translateY(6px) scale(0.94); opacity: 0; }
-          100% { transform: translateY(0) scale(1); opacity: 1; }
-        }
-      `}</style>
     </main>
   );
 }
